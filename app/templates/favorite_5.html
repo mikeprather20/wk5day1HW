@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <h1>Top 5 Favorite Artists</h1>
+    <br>
+    {% for artist in artists %}
+    {% if artist['name'] == 'Takato Yamamoto' %}
+    <div>
+        <h2>#1</h2>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="{{ artist['img'] }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h3 class="card-title">{{ artist['name'] }}</h3>
+        </div>
+    </div>
+    <br>
+    {% elif artist['name'] == 'Audrey Kawasaki' %}
+    <div>
+        <h2>#2</h2>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="{{ artist['img'] }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h4 class="card-title">{{ artist['name'] }}</h4>
+        </div>
+    </div>
+    <br>
+    {% elif artist['name'] == 'Michael Turner' %}
+    <div>
+        <h2>#3</h2>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="{{ artist['img'] }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ artist['name'] }}</h5>
+        </div>
+    </div>
+    <br>
+    {% elif artist['name'] == 'Wayne Barlowe' %}
+    <div>
+        <h2>#4</h2>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="{{ artist['img'] }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h6 class="card-title">{{ artist['name'] }}</h6>
+        </div>
+    </div>
+    <br>
+    {% elif artist['name'] == 'Shepard Fairey' %}
+    <div>
+        <h2>#5</h2>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="{{ artist['img'] }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h7 class="card-title">{{ artist['name'] }}</h7>
+        </div>
+    </div>
+    <br>
+    {% else %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{ artist['img'] }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-title">{{ artist['name'] }}</p>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+<br>
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home">RETURN HOME</a>
+        </li>
+      </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
